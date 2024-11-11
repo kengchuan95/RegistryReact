@@ -17,7 +17,7 @@ function App() {
   const [currentTab, setCurrentTab] = useState(1);
   const validTabs = tabs.map((object) => (
     <CustomTab
-      className={currentTab == object.id ? "activeTab" : ""}
+      className={currentTab === object.id ? "activeTab" : ""}
       tab={object.title}
       key={object.id}
       id={object.id}
@@ -31,10 +31,10 @@ function App() {
     <div className="App">
       <header className="tab-header">{validTabs}</header>
       <div className="tab-content">
-        {currentTab == 1 && <TabForm1 />}
-        {currentTab == 2 && <TabForm2 />}
-        {currentTab == 3 && <TabForm3 />}
-        {currentTab == 4 && <TabForm4 />}
+        {currentTab === 1 && <TabForm1 />}
+        {currentTab === 2 && <TabForm2 />}
+        {currentTab === 3 && <TabForm3 />}
+        {currentTab === 4 && <TabForm4 />}
       </div>
     </div>
   );
